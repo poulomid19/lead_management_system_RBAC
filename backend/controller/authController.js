@@ -12,8 +12,8 @@ const register = async(req,res)=>{
   const token = jwt.sign({id: user._id, role: user.role}, process.env.JWT_SECRET, { expiresIn: "1d" })
   res.cookie("token", token,{
     httpOnly: true,
-    secure: false,
-    sameSite: "strict"
+    secure: true,
+    sameSite: "none"
   })
   res.status(201).json({message: "user registered successfully",user})
   } catch (error) {
@@ -31,8 +31,8 @@ const login = async(req,res)=>{
     const token = jwt.sign({id: existUser._id, role: existUser.role}, process.env.JWT_SECRET, { expiresIn: "1d" })
     res.cookie("token", token,{
     httpOnly: true,
-    secure: false,
-    sameSite: "strict"
+    secure: true,
+    sameSite: "none"
   })
   res.status(201).json({message: "Logged In Successfully",
   user: { id: existUser._id, name: existUser.name, email: existUser.email, role: existUser.role, }})     
@@ -44,8 +44,8 @@ const login = async(req,res)=>{
 const logout = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: false,
-    sameSite: "strict",
+    secure: true,
+    sameSite: "none",
   });
   res.status(200).json({ message: "Logged out successfully" });
 };
