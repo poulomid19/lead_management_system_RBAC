@@ -29,9 +29,9 @@ npm install
 ### 3. Configure Environment Variables
 Create a .env file in the project root:
 env
-PORT=4000
+PORT=3000
+MONGO_URI=mongodb+srv://poulomidas11645_db_user:F4xnqAVmtoostyt5@leadmanagement.by8trs0.mongodb.net/leadManagement
 JWT_SECRET=lead@123
-MONGO_URI=mongodb://localhost:27017/lead_management
 
 ### 4. Start MongoDB
 Make sure MongoDB is running locally:
