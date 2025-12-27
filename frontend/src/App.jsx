@@ -16,7 +16,7 @@ function App() {
     const restoreAuth = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/api/auth/me",
+          "https://lead-management-system-rbac.onrender.com/api/auth/me",
           { withCredentials: true }
         );
         setAuth(res.data.user);
