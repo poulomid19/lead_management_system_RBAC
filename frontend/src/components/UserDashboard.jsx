@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const UserDashboard = ({ user, setAuth }) => {
   const [leads, setLeads] = useState([]);
 
-  useEffect(() => { axios.get("http://localhost:3000/api/leads", 
+  useEffect(() => { axios.get("https://render.com/docs/web-services#port-binding/api/leads", 
   { withCredentials: true })
   .then(res => { 
     setLeads(res.data.leads || res.data); }) 

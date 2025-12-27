@@ -10,7 +10,7 @@ const seedUsers = require("./seedUser")
 const dotenv = require("dotenv")
 dotenv.config()
 
-app.use(cors({ origin: "http://localhost:5173", 
+app.use(cors({ origin: "https://lead-management-system-rbac.vercel.app", 
 credentials: true }));
 
 app.use(express.json())

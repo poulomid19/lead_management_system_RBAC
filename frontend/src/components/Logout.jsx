@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Logout = ({setAuth}) => {
-    const navigate = useNavigate(); const handleLogout = async () => { await axios.post("http://localhost:3000/api/auth/logout", {}, 
+    const navigate = useNavigate(); const handleLogout = async () => { await axios.post("https://render.com/docs/web-services#port-binding/api/auth/logout", {}, 
     { withCredentials: true });
      setAuth(null); 
      navigate("/");
