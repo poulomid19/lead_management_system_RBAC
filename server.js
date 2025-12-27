@@ -24,9 +24,9 @@ mongoose.connect(process.env.MONGO_URI)
 })
 .catch((err)=> console.error(err))
 
-app.get("/", (req,res)=>{
-    res.status(200).json("Lead management system")
-})
+// app.get("/", (req,res)=>{
+//     res.status(200).json("Lead management system")
+// })
 app.use("/api/auth", authRoutes)
 app.use("/api/leads", leadRoutes)
 
