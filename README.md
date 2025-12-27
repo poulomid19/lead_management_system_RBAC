@@ -74,5 +74,3 @@ DELETE /api/leads/:id → Delete lead (Admin only)
 Admin and User1 are auto-seeded when the app starts.
 
 Leads must be created via API calls (not auto-seeded).
-
-Works with local MongoDB
