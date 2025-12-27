@@ -5,7 +5,7 @@ const UserLeads = () => {
     const { id } = useParams(); 
     const [leads, setLeads] = useState([]);
 
-    useEffect(() => { axios.get(`https://render.com/docs/web-services#port-binding/api/leads/${id}`, 
+    useEffect(() => { axios.get(`https://lead-management-system-rbac.onrender.com/api/leads/${id}`, 
         { withCredentials: true })
         .then(res => setLeads([res.data.lead]))
         .catch((err) => {

@@ -9,7 +9,7 @@ const Register = ({setAuth}) => {
     const role = "user";
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => { e.preventDefault(); try { const res = await axios.post( "https://render.com/docs/web-services#port-binding/api/auth/register", { name, email, password }, { withCredentials: true } ); 
+    const handleSubmit = async (e) => { e.preventDefault(); try { const res = await axios.post( "https://lead-management-system-rbac.onrender.com/api/auth/register", { name, email, password }, { withCredentials: true } ); 
      setAuth(res.data.user); 
      navigate("/user"); } 
      catch (err) 

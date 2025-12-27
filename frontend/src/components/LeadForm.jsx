@@ -17,7 +17,7 @@ const LeadForm = ({ onLeadAdded }) => {
     const handleSubmit = async (e) => { 
       e.preventDefault();
     try { 
-      const res = await axios.post("https://render.com/docs/web-services#port-binding/api/leads", form, 
+      const res = await axios.post("https://lead-management-system-rbac.onrender.com/api/leads", form, 
     { withCredentials: true, }); 
     onLeadAdded(res.data.lead);
     setForm(  

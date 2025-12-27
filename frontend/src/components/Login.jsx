@@ -8,7 +8,7 @@ const Login = ({setAuth}) => {
     const [password, setPassword] = useState(""); 
     const [error, setError] = useState("");
 
-    const handleSubmit = async (e) => { e.preventDefault(); try { const res = await axios.post("https://render.com/docs/web-services#port-binding/api/auth/login", { email, password, }, 
+    const handleSubmit = async (e) => { e.preventDefault(); try { const res = await axios.post("https://lead-management-system-rbac.onrender.com/api/auth/login", { email, password, }, 
     { withCredentials: true }); 
     if (res.data.user.role === "admin") { navigate("/admin"); 
     } 

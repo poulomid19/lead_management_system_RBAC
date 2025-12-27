@@ -8,7 +8,7 @@ const AdminDashboard = ({user,setAuth}) => {
     const [leads, setLeads] = useState([]); 
     
     const handleStatusChange = async (id, newStatus) => 
-    { try { const res = await axios.patch( `https://render.com/docs/web-services#port-binding/api/leads/${id}/status`, 
+    { try { const res = await axios.patch( `https://lead-management-system-rbac.onrender.com/api/leads/${id}/status`, 
     { status: newStatus },
     { withCredentials: true } ); 
     setLeads(leads.map(l => l._id === id ? res.data.lead : l)); } 
@@ -17,7 +17,7 @@ const AdminDashboard = ({user,setAuth}) => {
     }};
     
 
-    useEffect(() => { axios.get("https://render.com/docs/web-services#port-binding/api/leads", 
+    useEffect(() => { axios.get("https://lead-management-system-rbac.onrender.com/api/leads", 
     { withCredentials: true }) 
     .then(res => setLeads(res.data))
     .catch(err => console.error(err)); }, []);
